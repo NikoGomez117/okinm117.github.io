@@ -51,6 +51,21 @@ input[type="submit"],input[type="reset"],.w3ls_footer_grid_leftl,.w3ls_footer_gr
 	/*padding: 10px 10px 10px 10px;*/
 }
 
+.sub-section
+{
+	width:100%;
+	padding-bottom:12%;
+	position:relative;
+}
+
+.sub-text
+{
+	position:absolute;
+    display: inline-block;
+	width: 28%;
+	height:100%;
+}
+
 /*-- header --*/
 /*-- nav-effect --*/
 .cl-effect-1 a::before,
