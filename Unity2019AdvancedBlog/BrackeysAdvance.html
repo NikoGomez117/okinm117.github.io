@@ -79,11 +79,37 @@ body {
       <p>This is the first of 15 posts on my exploration of a breath of advanced Unity topics. I will go through a series of Brackey's tutorials and implement the projects outlined in the video. I then want to write up my reflection here detailing what I learned inluding a visual and then how related skills can be applied more generally in a professional setting. My hope is by the end of 2 weeks to have a showcase of my skills beyond programing and more specifically as a Unity developer.</p>
     </div>
 
+    <div class="card">
+      <h2>Day 1</h2>
+      <h5>Planetary Simulation in Unity, Dec 22, 2019</h5>
+      <head>
+		<meta content="text/html; charset=windows-1252" http-equiv="Content-Type">
+		<script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.8.0.min.js" type="text/javascript"></script>
+		<style type="text/css">  .img-swap {cursor: pointer;}  </style>  
+		<script type="text/javascript">
+		$(document).ready(function()//preload images
+		{ $(".img-swap").each(function () {$.ajax({url: this.src})})})
+		jQuery(function(){
+		 $(".img-swap").live('click', function() {
+		 	if ($(this).attr("class") == "img-swap") { this.src = this.src.replace(".png",".gif"); } 
+			else {this.src = this.src.replace(".gif",".png");	}
+			$(this).toggleClass("on");});});
+		</script>
+		</head>
+
+		<body>
+		<p>
+		<img alt="video gif animation" class="img-swap" src="PlanetCollision.png">
+		</p>
+		</body>
+      <p>Incomming</p>
+    </div>
+
     <!-- div class="card">
       <h2>TITLE HEADING</h2>
       <h5>Title description, Sep 2, 2017</h5>
       <div class="fakeimg" style="height:200px;">Image</div>
-      <p>Some text..</p>
+      <p>What the Project Did, What I did, and What it can be used for</p>
     </div -->
    </div>
 </div>
