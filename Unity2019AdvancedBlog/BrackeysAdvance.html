@@ -75,7 +75,7 @@ body {
     <div class="card">
       <h2>Intro</h2>
       <h5>Description of Project, Dec 21, 2019</h5>
-      <p>This is the first of 15 posts on my exploration of a breath of Unity topics. I will go through a series of Brackey's "Advanced" tutorials (non of it is overly complex) and implement the projects outlined in the video. I then want to write up my reflection here detailing what I learned inluding a visual and then how related skills can be applied more generally in a professional setting. My hope is by the end of 2 weeks I have a showcase of my skills beyond programing and more specifically as a Unity developer.</p>
+      <p>This is the first of 15 posts on my exploration of a breadth of Unity topics. I will go through a series of Brackey's "Advanced" tutorials (none of it is overly complex) and implement the projects outlined in the video. I then want to write up my reflection here detailing what I learned inluding a visual and then how related skills can be applied more generally in a professional setting. My hope is by the end of 2 weeks I have a showcase of my skills beyond programing and more specifically as a Unity developer.</p>
     </div>
 
     <div class="card">
@@ -102,9 +102,25 @@ body {
 		</p>
 		</body>
       <p>This project was all about leveraging Unity's physics simulation capabilities. The heart of the code was in a physics step which
-	  takes each other gravatational object and attracts it too itself. The object list is static and added individually on enabling too
+	  takes each other gravatational object and attracts them too itself. The object list is static and added individually on enabling too
 	  removed runtime lookup. The obvious usecase is a gravity platformer in the vain of Mario
 	  Galexy but it's also pretty foundational for space sandbox sims and Kerbal Space program.</p>
+    </div>
+	
+	<div class="card">
+      <h2>Day 2</h2>
+      <h5>Dialogue Manager in Unity, Dec 22, 2019</h5>
+		<body>
+		<p>
+		<img src="Day2_NeroSpeech.gif" alt=”animated” />
+		</p>
+		</body>
+      <p>
+	  This time the focus was on Untiy's canvas system for implementing a dialoglue system (for like indie RPGs and VNs). It also incoperates
+	  animations for tranitioning the text box onscreen. It works by having dialgue objects with sentences which are then loaded into a
+	  queue in the manger. The senetence is then broken up by character and loaded individually in a coroutine for that nice slow spelling
+	  out of words. Brackey's implemtation of dialgue objects didn't include images for the character so I just added it.
+	  </p>
     </div>
 
     <!-- div class="card">
