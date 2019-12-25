@@ -17,14 +17,13 @@ body {
 /* Left column */
 .leftcolumn {
   float: left;
-  width: 75%;
+  width: 50%;
 }
 
 /* Right column */
 .rightcolumn {
   float: left;
-  width: 25%;
-  padding-left: 20px;
+  width: 50%;
 }
 
 /* Fake image */
@@ -71,11 +70,10 @@ body {
 </div>
 
 <div class="row">
-  <div class="leftcolumn">
     <div class="card">
       <h2>Intro</h2>
       <h5>Description of Project, Dec 21, 2019</h5>
-      <p>This is the first of 15 posts on my exploration of a breadth of Unity topics. I will go through a series of Brackey's "Advanced" tutorials (none of it is overly complex) and implement the projects outlined in the video. I then want to write up my reflection here detailing what I learned inluding a visual and then how related skills can be applied more generally in a professional setting. My hope is by the end of 2 weeks I have a showcase of my skills beyond programing and more specifically as a Unity developer.</p>
+      <p>This is the first of 15 posts on my exploration of a breadth of Unity topics. I will go through a series of Brackey's "Advanced" tutorials (none of it is complex) and implement the projects outlined in the video. I then want to write up my reflection here detailing what I learned inluding a visual and then how related skills can be applied more generally in a professional setting. My hope is by the end of 2 weeks I have a showcase of my skills beyond programing and more specifically as a Unity developer.</p>
     </div>
 
     <div class="card">
@@ -139,6 +137,31 @@ body {
 	  things like animation curves or orderable lists.
 	  </p>
     </div>
+	
+	<div class="card">
+      <h2>Day 4</h2>
+      <h5>The High Definition Render Pipeline, Dec 25, 2019</h5>
+		<body>
+			<div class="leftcolumn">
+				<p>
+					<img src="Day4_TempleBefore.png" />
+				</p>
+			</div>
+			<div class="rightcolumn">
+				<p>
+					<img src="Day4_PostHDRP.gif" alt=”animated” />
+				</p>
+			</div>
+		</body>
+		  <p>
+		  I'm went outside the playlist with this HDRP project. I used a corinthian temple prefab I found in the asset store as the subject and
+		  added some basic elements to better match Brackey's example. I've worked with this kinda stuff before but immediately I could tell 
+		  Unity added a lot of polish to the process. All the fancy post processing effects are self contained within the volume component and 
+		  there's even a debugger specifically for rendering. The coolest thing you can do with that is set the albedo to light grey and see
+		  explicately how the scene is being lit. Above the left image is before and the right gif is after HDRP and adding lights and stuff
+		  (I couldn't get rid of the gif artifacts).
+		  </p>
+    </div>
 
     <!-- div class="card">
       <h2>TITLE HEADING</h2>
@@ -146,5 +169,4 @@ body {
       <div class="fakeimg" style="height:200px;">Image</div>
       <p>What the Project Did, What I did, and What it can be used for</p>
     </div -->
-   </div>
 </div>
