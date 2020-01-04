@@ -82,13 +82,13 @@ body {
       <!--head>
 		<meta content="text/html; charset=windows-1252" http-equiv="Content-Type">
 		<script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.8.0.min.js" type="text/javascript"></script>
-		<style type="text/css">  .img-swap {cursor: pointer;}  </style>  
+		<style type="text/css">  .img-swap {cursor: pointer;}  </style>
 		<script type="text/javascript">
 		$(document).ready(function()//preload images
 		{ $(".img-swap").each(function () {$.ajax({url: this.src})})})
 		jQuery(function(){
 		 $(".img-swap").live('click', function() {
-		 	if ($(this).attr("class") == "img-swap") { this.src = this.src.replace(".png",".gif"); } 
+		 	if ($(this).attr("class") == "img-swap") { this.src = this.src.replace(".png",".gif"); }
 			else {this.src = this.src.replace(".gif",".png");	}
 			$(this).toggleClass("on");});});
 		</script>
@@ -104,7 +104,7 @@ body {
 	  removed runtime lookup. The obvious usecase is a gravity platformer in the vain of Mario
 	  Galexy but it's also pretty foundational for space sandbox sims and Kerbal Space program.</p>
     </div>
-	
+
 	<div class="card">
       <h2>Day 2</h2>
       <h5>Dialogue Manager in Unity, Dec 23, 2019</h5>
@@ -120,7 +120,7 @@ body {
 	  out of words. Brackey's implemtation of dialgue objects didn't include images for the character so I just added it.
 	  </p>
     </div>
-	
+
 	<div class="card">
       <h2>Day 3</h2>
       <h5>Custom Inspector in Unity, Dec 24, 2019</h5>
@@ -137,7 +137,7 @@ body {
 	  things like animation curves or orderable lists.
 	  </p>
     </div>
-	
+
 	<div class="card">
       <h2>Day 4</h2>
       <h5>The High Definition Render Pipeline, Dec 25, 2019</h5>
@@ -155,14 +155,14 @@ body {
 		</body>
 		  <p>
 		  I'm went outside the playlist with this HDRP project. I used a corinthian temple prefab I found in the asset store as the subject and
-		  added some basic elements to better match Brackey's example. I've worked with this kinda stuff before but immediately I could tell 
-		  Unity added a lot of polish to the process. All the fancy post processing effects are self contained within the volume component and 
+		  added some basic elements to better match Brackey's example. I've worked with this kinda stuff before but immediately I could tell
+		  Unity added a lot of polish to the process. All the fancy post processing effects are self contained within the volume component and
 		  there's even a debugger specifically for rendering. The coolest thing you can do with that is set the albedo to light grey and see
 		  explicately how the scene is being lit. Above the left image is before and the right gif is after HDRP and adding lights and stuff
 		  (I couldn't get rid of the gif artifacts).
 		  </p>
     </div>
-	
+
 	<div class="card">
       <h2>Day 5</h2>
       <h5>New Unity Input System, Dec 26, 2019</h5>
@@ -178,7 +178,7 @@ body {
 	  logic like "started" or "canceled" and values like a vector2 for movement on gamepad sticks.
 	  </p>
     </div>
-	
+
 	<div class="card">
       <h2>Day 6</h2>
       <h5>Unity Animation, Dec 27, 2019</h5>
@@ -192,7 +192,7 @@ body {
 	  All this was old hat honestly but I did learn about the AnyState in the aminator for exiting into Jumping from all other states.
 	  </p>
     </div>
-	
+
 	<div class="card">
       <h2>Day 7</h2>
       <h5>Melee Combat, Dec 28, 2019</h5>
@@ -202,11 +202,11 @@ body {
 		</p>
 		</body>
       <p>
-	  Alright here's the combat system and all in all the solution was pretty elegant with Unity's fancy toolkit for input and 
-	  animations. I deviated from the script a bit by setting up a loop to allow attacks to continuously occur while space is held. 
+	  Alright here's the combat system and all in all the solution was pretty elegant with Unity's fancy toolkit for input and
+	  animations. I deviated from the script a bit by setting up a loop to allow attacks to continuously occur while space is held.
 	  </p>
     </div>
-	
+
 	<div class="card">
       <h2>Day 8</h2>
       <h5>FPS Character Controller, Dec 29, 2019</h5>
@@ -216,10 +216,29 @@ body {
 		</p>
 		</body>
       <p>
-	  So this time it's every Unity developers 101 from like 5 years ago (back when unity was 3D focused) with a FPS character 
-	  controller. I know it's kinda rudemetary but I wanted to rethink the implementation in 2019 and use the fancy new input 
+	  So this time it's every Unity developers 101 from like 5 years ago (back when unity was 3D focused) with a FPS character
+	  controller. I know it's kinda rudemetary but I wanted to rethink the implementation in 2019 and use the fancy new input
 	  system stuff. Also this implementation opted to not have a rigidbody on the player which I kinda liked. Instead physics
 	  movements are simulated in the controller which forces explicite definition of how the player can and should move.
+	  </p>
+    </div>
+
+	<div class="card">
+      <h2>Day 9</h2>
+      <h5>First Unreal Game, Jan 4, 2020</h5>
+		<body>
+		<p>
+		<img src="Day9_FirstUnrealGame.gif" alt=”animated” width="25%"/>
+		</p>
+		</body>
+      <p>
+	  After Hanukkah I decided to take a break while traveling back to the bay and participating in some new years shenanigans.
+    But its 2020 and I decided to start off the new year by learning Unreal! This was done through a tutorial at baseCodeCamp
+    and it introduced the basics of gameplay programming in c++/Unreal. The player class "BatteryMan" inherits from character
+    and implements the basics for third person character movement. I think my main takeaway from this was that for every c++
+    class for which you want to have an in scene corollary you need a blueprint. It was also interesting how much high level
+    things the two engines share; that you'd have some variables as readonly in blueprints while others your'd explicately
+    modify in the blueprint. 
 	  </p>
     </div>
 
