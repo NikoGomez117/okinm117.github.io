@@ -35,36 +35,7 @@ input[type="submit"],input[type="reset"],.w3ls_footer_grid_leftl,.w3ls_footer_gr
 	-ms-transition: .5s ease-in;
 }
 
-.example-proj
-{
-	width:100%;
-	position:relative;
-	padding-bottom:24.75%;
-	/*background:#b27d03;*/
-}
-
-.example-proj iframe
-{
-	position:absolute;
-	width:33%;
-	height:100%;
-	/*padding: 10px 10px 10px 10px;*/
-}
-
-.sub-section
-{
-	width:100%;
-	padding-bottom:15%;
-	position:relative;
-}
-
-.sub-text
-{
-	position:absolute;
-    display: inline-block;
-	width: 33%;
-	height:100%;
-}
+/*-- legacy .example-proj / .sub-text grid replaced by .proj-grid at end of file --*/
 
 /*-- header --*/
 /*-- nav-effect --*/
@@ -1677,3 +1648,263 @@ p.counter {
 		width: 45%;
 	}
 }
+
+/*-- /projects grid (2026 refresh) --------------------------------------
+   Replaces the old absolutely-positioned .example-proj / .sub-text pair.
+   Same 3-across look on desktop, but rows can hold 1-3 cards and the
+   whole thing collapses cleanly on tablet and phone.
+----------------------------------------------------------------------*/
+.proj-section {
+	margin: 0 0 4.5em;
+}
+.proj-section:last-of-type {
+	margin-bottom: 1em;
+}
+.proj-section-head {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-align: baseline;
+	-ms-flex-align: baseline;
+	align-items: baseline;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	border-bottom: 2px solid #b27d03;
+	padding-bottom: 0.25em;
+	margin-bottom: 1em;
+}
+.proj-section-head h4 {
+	font-family: 'Gidugu', sans-serif;
+	font-size: 2.8em;
+	line-height: 1;
+	color: #111;
+	letter-spacing: 2px;
+	margin: 0;
+}
+.proj-section-head .years {
+	font-size: 0.78em;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	color: #b27d03;
+	padding-bottom: 0.4em;
+}
+p.proj-section-note {
+	color: #3a3a3a;
+	font-size: 0.92em;
+	line-height: 1.9em;
+	letter-spacing: 0.5px;
+	margin: 0 0 1.8em;
+}
+.proj-grid {
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-columns: 1fr 1.6em 1fr 1.6em 1fr;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 2.4em 1.6em;
+	gap: 2.4em 1.6em;
+}
+/* consecutive rows in one section get the same rhythm as rows inside a grid */
+.proj-grid + .proj-grid {
+	margin-top: 2.4em;
+}
+.proj-grid.feature {
+	grid-template-columns: minmax(0, 700px) 1fr;
+	-webkit-box-align: start;
+	-ms-flex-align: start;
+	align-items: start;
+}
+.proj-card {
+	min-width: 0;
+}
+/* a trailing card left alone on the last row sits centered, one column wide */
+.proj-grid > .proj-card.solo {
+	grid-column: 1 / -1;
+	max-width: calc((100% - 3.2em) / 3);
+	margin-left: auto;
+	margin-right: auto;
+}
+.proj-media {
+	position: relative;
+	width: 100%;
+	padding-bottom: 56.25%;
+	background: #000;
+	border: 3px solid #b27d03;
+	overflow: hidden;
+}
+.proj-media iframe,
+.proj-media video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: 0;
+	display: block;
+	background: #000;
+}
+.proj-media video {
+	-o-object-fit: cover;
+	object-fit: cover;
+}
+.proj-media video.contain {
+	-o-object-fit: contain;
+	object-fit: contain;
+}
+.proj-card h5 {
+	font-family: 'Gidugu', sans-serif;
+	font-size: 2.2em;
+	line-height: 1.1;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	color: #b27d03;
+	margin: 0.45em 0 0;
+}
+.proj-card .proj-meta {
+	display: block;
+	font-size: 0.7em;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: #6b6b6b;
+	margin: 0.2em 0 1em;
+	line-height: 1.7em;
+}
+.proj-card p {
+	color: #333;
+	font-size: 0.9em;
+	line-height: 1.9em;
+	letter-spacing: 0.4px;
+	margin: 0;
+}
+a.btn-gold,
+a.btn-gold:link,
+a.btn-gold:visited {
+	display: inline-block;
+	margin-top: 1.1em;
+	padding: 0.6em 1.4em;
+	background: #b27d03;
+	color: #fff;
+	font-size: 0.72em;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	border: 2px solid #b27d03;
+	transition: .3s ease-in;
+	-webkit-transition: .3s ease-in;
+}
+a.btn-gold:hover,
+a.btn-gold:focus {
+	background: transparent;
+	color: #b27d03;
+	text-decoration: none;
+}
+.about-links {
+	margin-top: 2.4em;
+}
+.about-links a.btn-gold {
+	margin: 0 0.7em 0.8em 0;
+}
+@media (max-width: 991px) {
+	.proj-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.proj-grid.feature {
+		grid-template-columns: minmax(0, 1fr);
+	}
+	.proj-grid > .proj-card.solo {
+		max-width: calc((100% - 1.6em) / 2);
+	}
+	.proj-section-head h4 {
+		font-size: 2.3em;
+	}
+	.proj-section-head .years {
+		font-size: 0.7em;
+	}
+}
+@media (max-width: 640px) {
+	.proj-grid {
+		grid-template-columns: minmax(0, 1fr);
+		grid-gap: 2.2em 0;
+		gap: 2.2em 0;
+	}
+	.proj-grid > .proj-card.solo {
+		max-width: none;
+	}
+	.proj-card h5 {
+		font-size: 2em;
+	}
+	.about-links a.btn-gold {
+		display: block;
+		margin: 0 0 0.7em 0;
+		text-align: center;
+	}
+}
+/*-- //projects grid --*/
+
+
+/*-- /contact ---------------------------------------------------------*/
+p.contact-intro {
+	text-align: center;
+	margin: 0 0 2.4em;
+}
+.contact-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 1.6em;
+	gap: 1.6em;
+	max-width: 900px;
+	margin: 0 auto;
+}
+a.contact-card,
+a.contact-card:link,
+a.contact-card:visited {
+	display: block;
+	text-align: center;
+	padding: 2em 1em;
+	background: #fff;
+	border: 2px solid #b27d03;
+	color: #212121;
+	transition: .3s ease-in;
+	-webkit-transition: .3s ease-in;
+}
+a.contact-card:hover,
+a.contact-card:focus {
+	background: #b27d03;
+	color: #fff;
+	text-decoration: none;
+}
+a.contact-card i {
+	display: block;
+	font-size: 2.4em;
+	color: #b27d03;
+	margin-bottom: 0.3em;
+	transition: .3s ease-in;
+	-webkit-transition: .3s ease-in;
+}
+a.contact-card:hover i,
+a.contact-card:focus i {
+	color: #fff;
+}
+a.contact-card h5 {
+	font-family: 'Gidugu', sans-serif;
+	font-size: 1.9em;
+	line-height: 1;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	margin: 0 0 0.15em;
+	color: inherit;
+}
+a.contact-card span {
+	display: block;
+	font-size: 0.82em;
+	letter-spacing: 1px;
+	word-break: break-word;
+	color: inherit;
+}
+@media (max-width: 640px) {
+	.contact-grid {
+		grid-template-columns: minmax(0, 1fr);
+	}
+}
+/*-- //contact --*/
